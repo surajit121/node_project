@@ -1,6 +1,9 @@
+
+import 'dotenv/config'
 import express from "express";
 import mongoose from "mongoose";
 import UserRouter from "./router/UserRouter.js";
+
 
 
 const app = express();
@@ -10,7 +13,7 @@ app.use(express.json());
 
 app.use("/api/User", UserRouter);
 
-mongoose.connect('mongodb+srv://surajitkarmakar12:rgB5NPTsDgvUfLwa@cluster0.odg6ose.mongodb.net/').then(()=>{
+mongoose.connect(process.env.MOGOURL).then(()=>{
     console.log("mongodb is connect")
     app.listen(port,()=>{
         console.log("server is running")
