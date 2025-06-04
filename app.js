@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use("/api/User", UserRouter);
 
-mongoose.connect(process.env.MOGOURL).then(()=>{
+mongoose.connect(process.env.MONGOURL).then(()=>{
     console.log("mongodb is connect")
     app.listen(port,()=>{
         console.log("server is running")
