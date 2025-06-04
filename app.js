@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use("/api/User", UserRouter);
 
-mongoose.connect('mongodb://localhost:27017/dbms').then(()=>{
+mongoose.connect('mongodb+srv://surajitkarmakar12:rgB5NPTsDgvUfLwa@cluster0.odg6ose.mongodb.net/').then(()=>{
     console.log("mongodb is connect")
     app.listen(port,()=>{
         console.log("server is running")
