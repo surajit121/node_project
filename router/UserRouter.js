@@ -19,7 +19,7 @@ router.post("/create", async (req, res)=>{
 router.get("/", async (req,res)=>{
   try{
     const usersave = await user.find();
-    res.send(usersave);
+    res.json(usersave);
   }catch(err){
     res.status(500).json({ error: err.message });
   };
