@@ -13,3 +13,4 @@ const uservalidation = joi.object({
 });
 
 export default uservalidation;
+
