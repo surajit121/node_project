@@ -8,7 +8,7 @@ router.post("/create", async (req, res) => {
   try {
     const { error } = uservalidation.validate(req.body);
     if (error){
-      return res.status(400).json({ error: err.message });
+      return res.status(400).json({ error: error.message });
     }
     const usersave = new user(req.body);
     const saved = await usersave.save();
