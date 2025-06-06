@@ -5,6 +5,7 @@ import uservalidation from "../model/validation.js";
 const router = express.Router();
 
 router.post("/create", async (req, res) => {
+  console.log(req.body); // Add this line
   try {
     const { error } = uservalidation.validate(req.body);
     if (error){
